@@ -1,0 +1,373 @@
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+/* ---- stats.js ---- */
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#intercom-container .intercom-link-container{
+		display:none!important;
+}
+.border-none{
+	border:none;
+}
+.none{
+	display:none;
+}
+.l-h-20{
+	line-height: 20px;
+}
+.m-b-10{
+	margin-bottom: 10px;
+}
+.m-b-15{
+	margin-bottom: 15px;
+}
+.m-b-30{
+	margin-bottom: 30px;
+}
+.m-b-50{
+	margin-bottom: 50px;
+}
+.m-b-100{
+	margin-bottom: 100px;
+}
+.m-t-90{
+	margin-top:90px;
+}
+.p-b-80{
+	padding-bottom:80px;
+}
+.pointer{
+	cursor:pointer;
+}
+.border{
+	border:1px red solid;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clear{
+	clear:both;
+}
+.customer_logo{
+	width:46px;
+	height:46px;
+	margin-right:24px;
+}
+.detail_need{
+	border-bottom:1px dashed #ced7db;
+	text-align:left;
+	height:160px;
+}
+.av_need{
+   	background-image:url('../images/cloud-functions.png');
+   	background-size:cover;
+}
+.goodness{
+   	margin:0px auto 20px; 
+   	width:44px;height:44px;
+}
+.banner_pc{
+   	padding:0px!important;
+   	background-image:url('../images/banner.png');
+   	background-repeat: no-repeat;
+   	background-size: 100%;
+}
+.banner_pc .sdk-btn{
+   	color:#fff;
+   	border:1px solid #fff;
+}
+.banner_pc .intro{
+   	position:absolute;
+   	top:180px;
+   	width:100%;
+}
+.banner_pc #banner_video{
+   	z-index:-10;
+}
+.banner_pc #banner_video #video1{
+   	width:100%;
+}
+#customer_say{
+    width:100%;
+    background:#fffefa;
+    padding-bottom:80px;
+}
+#customer_say #lunbo_pointer{
+ 	margin-top:40px;
+ 	margin-bottom:60px
+}
+#customer_say .item-main{
+   	padding-bottom:0px;
+   	padding-left:5%;
+   	padding-right:3%;
+}
+#customer_say .item-main .item-main-detail{
+   	padding-top:3%;
+   	color:#666;
+   	text-align:left;
+   	border:none;
+   	padding-right:7%;
+}
+#customer_say .item-main .item-main-detail .show-detail-case{
+    color:#1ea1e8;float:right
+}
+#customer_say .item-main .item-main-detail .item-main-it{
+    line-height:32px;
+    font-size:16px;
+    border:none;
+}
+#customer_say .item-main .item-main-detail .item-main-it .item-main-img{
+    margin-top:-18px;
+    margin-left:0px;
+}
+#customer_say .item-main .item-main-detail .item-main-it .item-main-img1{
+    float:right;
+    margin-top:0px;
+    margin-right:0px;
+}
+.detail-need-main{
+    margin-left:4%;
+    padding-top:30px
+}
+.detail-need-main .detail_need .detail_need_text{
+    line-height:20px;
+    color:#d8d8d8;
+    font-size:15px;
+}
+.bear-weight{
+   	width:100%;
+   	background:#f9f9f9;
+   	padding-bottom:40px;
+}
+.bear-weight .bear-text{
+   	font-size:28px;
+   	color:#fff;
+   	margin-top:45px
+}
+.bear-weight .bear-online{
+    background-image:url(images/offline_edu.png);
+    height:280px;
+    text-align:center;
+}
+.bear-weight .bear-online .bear-online-text{
+    font-size:36px;color:#fff;margin-top:45px;
+}
+.bear-weight .bear-online .bear-online-text1{
+   	font-size:21px;
+   	color:#fff;
+   	margin-top:20px;
+}
+.bear-weight .bear-online .bear-online-a{
+   	font-size:14px;
+   	color:#ced7db;
+   	width:135px;
+   	margin:20px auto;
+}
+.bear-weight .bear-medical{
+    background-image:url('../images/yiliao.png');
+    height:190px;
+    text-align:center;
+}
+.bear-weight .bear-social{
+    background-image:url('../images/tongxun.png');
+    height:190px;
+    text-align:center
+}
+.partner{
+   	background:#fff;
+   	min-height:540px;
+   	padding-bottom:20px;
+}
+.partner .index_title{
+    color:#333;
+    margin-bottom: 10px;
+}
+.partner .partner-detail{
+    padding-top:5px;
+    padding-bottom:10px;
+}
+.sdk-news{
+    background:#F5F5F5;
+    min-height:400px;
+    padding-bottom:20px;
+}
+.sdk-news .sdk-news-detail{
+   	padding-top:25px;
+   	padding-bottom:10px;
+}
+@media (min-width:950px){
+	.cloud_survice{
+		height:240px;
+	}
+	#el_1{
+	    text-align:center;height:380px;
+	}
+	#el_2{
+	    text-align:center;height:410px;
+	}
+	#el_3_1{
+	    display:none;
+	}
+	#el_3_2{
+	    display:block;
+	}
+	#el_3{
+	    text-align:center;height:360px;
+	}
+	.av_need{
+	   	background-image:url('../images/cloud-functions.png');
+	}
+}
+@media (max-width:950px){
+  	.cloud_survice{
+		height:240px;
+	}
+    #el_1{
+      text-align:center;height:170px;
+    }
+    #el_2{
+      text-align:center;height:200px;
+    }
+    #el_3_1{
+      display:block;
+    }
+    #el_3_2{
+	 display:none;
+	}
+    #el_3{
+      border:none;text-align:center;height:300px;
+    }
+}
+.banner-btn{
+	border-radius:30px;
+	margin-bottom:15px;
+}
+.banner_mobile{
+	display: none;
+}
+.banner-pc-title{
+	font-size: 1.11rem!important;
+}
+@media screen and (min-width:1367px){
+	.banner-pc-title{
+		font-size: 1.35rem!important;
+	}
+
+}
+@media screen and (max-width:1200px){
+	#intro_1{
+		top:170px!important;
+	}
+	.banner-pc-title{
+		display: block!important;
+	}
+}
+@media screen and (max-width:1200px){
+	#intro_1{
+		top:120px!important;
+	}
+}
+@media screen and (max-width:768px){
+	.banner_mobile{
+		display: block;
+	}
+	.banner_pc{
+		display: none;
+	}
+}
+@media (max-width:480px){
+	#intro_1 .container{
+		text-align: center;;
+	}
+	.watch-docs{
+		margin-left:0px!important;
+	}
+	.banner-btn{
+		width:100%;
+		margin-bottom:15px;
+	}
+	#red_bag{
+		display:block!important;
+		margin-left: 5px;
+		margin-right: 0px;
+	}
+  	.gray_bg .possible{
+		line-height:60px;font-size:16px;letter-spacing:5spx;
+	}
+  	#customer_say{
+  		height: 850px;
+  	}
+  	#lunbo_pointer{
+  		position:absolute!important;
+ 	}
+  	.detail_need{
+  		height:180px;
+  	}
+  	.cloud_survice{
+		height:260px;
+	}
+	.bottom_goodness{
+		margin-bottom: 50px;
+	}
+    #el_1{
+      text-align:center;height:200px;
+    }
+    #el_2{
+      text-align:center;height:200px;
+    }
+    #el_3_1{
+      display:block;
+    }
+    #el_3_2{
+      display:none;
+    }
+    #el_3{
+      text-align:center;height:200px;
+    }
+}
+@media (max-width:390px){
+ 	.gray_bg .possible{
+		line-height:60px;font-size:16px;letter-spacing:2px;
+	}
+}
+@media (max-width:320px){
+	.cloud_survice{
+		height:280px;
+	}
+	.bottom_goodness{
+		margin-bottom: 50px;
+	}
+	#el_3{
+      text-align:center;height:150px;
+    }
+}
+	  
+h3{
+  font-size: 36px;
+}
+
+	
+	

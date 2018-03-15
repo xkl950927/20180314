@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>登录</title>
+		<link rel="shortcut icon" href="favicon1.ico" />
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/fig.css" />
+	    <link rel="stylesheet" href="css/app.css" />
+	    <link rel="stylesheet" href="css/btn.css" />
+	    <link rel="stylesheet" href="css/login.css" />
+	    <link rel="stylesheet" href="css/register.css" />
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top">
+			<nav class="navbar navbar-default navbar-fixed-top navsty" role="navigation">
+		  		<div class="container navcon" id="header">
+		  			<div class="navbar-header nheader">
+		  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+		  					<span class="sr-only">Toggle navigation</span>
+		  					<span class="icon-bar"></span>
+		  					<span class="icon-bar"></span>
+		  					<span class="icon-bar"></span>
+		  				</button>
+		  				<a class="navbar-brand logo" href="/"><img src="images/develop logo.png" /></a>
+		  			</div>
+		  			<div class="collapse navbar-collapse" id="demo-navbar">
+		  				<ul class="nav navbar-nav navtit">
+		  				  	<li class="ntit_0"><a href="javascript:;" >产品和应用</a></li>
+		  				  	<li class="ntit_1"><a href="javascript:;" >文档</a></li>
+		  				  	<li class="ntit_2"><a href="javascript:;" >支持</a></li>
+		  				  	<li class="ntit_3"><a href="javascript:;" target="_blank">新闻</a></li>
+		  					<li class="login">
+								<div class="nlogin"><a href="javascript:;" class="logBtn slog">登录</a>
+									<a href="javascript:;" class="regBtn slog">注册</a>
+								</div>
+								<div class="ylogin yl_1">
+									<div class="ymore">更多 <i class="fa fa-caret-down"></i></div>
+									<ul class="more">
+										<li><a href="javascript:;">应用管理</a></li>
+										<li><a href="javascript:;">系统管理</a></li>
+										<li><a href="#" onclick="log_out()">退出</a></li>
+										<li><a href="javascript:;">返回到旧版本</a></li>
+									</ul>
+								</div>
+								<div class="ylogin yl_2">
+									<div class="ymore">更多 <i class="fa fa-caret-down"></i></div>
+									<ul class="more">
+										<li><a href="javascript:;">我的应用</a></li>				
+										<li><a href="javascript:;" onclick="ttp()">账户管理</a></li>
+										<li><a href="#" onclick="log_out()">退出</a></li>
+										<li><a href="javascript:;">返回到旧版本</a></li>
+									</ul>
+								</div>
+							</li>
+		  				</ul>
+			  		</div>
+		  		</div>
+		  	</nav>
+		</div>
+		
+		<section id="content" class="m-t-lg wrapper-md animated fadeInUp">
+  			<div class="container aside-xxl signin_main" style="margin-top:5%;margin-bottom:8%;text-align:center;max-width:455px">
+   				<section style="border:none;box-shadow:none" class="panel panel-default bg-white m-t-lg">
+					<header style="background-color:#fff;color:#333;margin-bottom:0px;" class="panel-heading text-center">
+						<h3 style="font-size:28px">Juphoon&nbsp;开发网络&nbsp;&nbsp;连通你与世界</h3>
+					</header>
+     				<form class="panel-body wrapper-lg">
+				        <div class="form-group" style="text-align:left">
+				           <input id="email" style="box-shadow:none" type="text" placeholder="用户名" class="form-control" >
+						   <h6 id="email_error"  style="color:red;display:none" data-bind="text:email_error"></h6>
+				        </div>
+				        <div class="form-group" style="text-align:left">
+				          <input style="box-shadow:none" type="password" id="inputPassword" placeholder="密码" class="form-control" data-bind="input_pwd:pwd,value:pwd">
+						   <h6 id="pwd_error" style="color:red;display:none" data-bind="text:pwd_error"></h6>
+				        </div>
+						<div>
+					        <div class="checkbox" style="text-align:left;width: 200px" >
+					         	<label style="padding:0;" for="remember_me">
+						         	<input style="margin-left:5px" id="remember_me" type="checkbox" data-bind="checked:rem">
+						            <span  style="line-height:20px;cursor:pointer;color:#717171;margin-left:20px" >记住我</span>
+					         	</label>
+					        </div>
+							<div style="float:right;margin-top:-30px;">
+							 	<a class="pull-right m-t-xs" href="/forget" style="color:#717171"><small>忘记密码?</small></a>
+							</div>
+				        </div>
+	       	       		<div class="line line-dashed"></div>
+						<button  style="color:#fff;border-radius:3px;display:block;" class="button button-raised button-primary btn-block" data-bind="click:signin">
+							<span style="color:#fff;font-size:20px">登  录</span>
+						</button>
+     				</form>
+				</section>
+			</div>
+		</section>
+		<!--模态框-->
+		<div class="modal fade" id="server_environment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		 	<div class="modal-dialog" style="padding-top: 100px;">
+			    <div class="modal-content">
+			        <div class="modal-header">
+				    	<h4 class="modal-title" id="myModalLabel">检测到您有<span data-bind="text:num"></span>个开发环境</h4>      
+			        </div>
+			        <div class="modal-body">
+				    	<p>请您选择<span data-bind="text:ptxt"></span>登录。</p>
+						<input type="hidden" data-bind='value:sval' />
+						<div style="padding:10px 20px;overflow:hidden;" data-bind="foreach:server_environment_list">
+							<div class="col-xs-6" style="padding-left:50px;">
+								<label style="font-weight:normal;" data-bind="click:function(){$parent.change_server($data,$index());return true;}">
+									<div class="rse" name="se" style="display:inline-block"></div>
+									<span data-bind="text:$data"></span>
+								</label>
+							</div>
+						</div>
+			        </div>
+			  
+			      	<div class="modal-footer">
+					    <div>
+						   <a data-dismiss="modal"  type="button" class="btn btn-default">取消</a>
+					       <a type="button" class="btn btn-primary" data-bind="click:c_login">确定</a>
+				        </div>
+			     	</div>
+				</div>
+		    </div>
+		</div>
+		
+		<!--底部-->
+		<div class="bottom">
+			<div class="container">
+				<div class="contarticle">
+					<div class="language">
+						<div class="ltitle">语言</div>
+						<div class="lchoose">
+							<a href="">中文(简体)</a>
+							<a href="">English (US)</a>
+						</div>
+					</div>
+					<div class="bnav">
+						<div class="row">
+							<div class="col-sm-2">
+								<div class="bntit">关于我们</div>
+								<ul class="bnlist">
+									<li><a href="javascript:;">菊风公司</a></li>
+									<li><a href="javascript:;">招贤纳士</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-2">
+								<div class="bntit">产品</div>
+								<ul class="bnlist">
+									<li><a href="javascript:;">云通讯</a></li>
+									<li><a href="javascript:;">VoIP</a></li>
+									<li><a href="javascript:;">RCS</a></li>
+									<li><a href="javascript:;">音视频引擎</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-2">
+								<div class="bntit">SDK</div>
+								<ul class="bnlist">
+									<li><a href="javascript:;">云通讯</a></li>
+									<li><a href="javascript:;">VoIP</a></li>
+									<li><a href="javascript:;">RCS</a></li>
+									<li><a href="javascript:;">音视频引擎</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-2">
+								<div class="bntit">文档</div>
+								<ul class="bnlist">
+									<li><a href="javascript:;">云通讯</a></li>
+									<li><a href="javascript:;">VoIP</a></li>
+									<li><a href="javascript:;">RCS</a></li>
+									<li><a href="javascript:;">音视频引擎</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-2">
+								<div class="bntit">支持</div>
+								<ul class="bnlist">
+									<li><a href="javascript:;">云通讯</a></li>
+									<li><a href="javascript:;">VoIP</a></li>
+									<li><a href="javascript:;">RCS</a></li>
+									<li><a href="javascript:;">音视频引擎</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-2">
+								<div class="bntit">最新消息</div>
+								<ul class="bnlist">
+									<li><a href="">博客</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="copyright" style="font-size: 12px;">版权©2018 宁波菊风系统软件有限公司。未经允许不得以任何方式和手段进行复制和使用。</div>
+				</div>
+			</div>
+		</div>        
+    </div>
+	</body>
+</html>

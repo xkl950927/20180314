@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    	
+    <title>JusTalk Cloud云通讯-全球领先的视频通讯云平台</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="css/header.css" />    
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/fig.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/btn.css" />
+    <link rel="stylesheet" href="css/other.css" />
+       
+  </head>
+  <body>
+  	<div id="tel"  class="tel_online" onclick="online_tel()">
+	</div>
+	<a  target="_blank" href="javascript"  id="QQ" class="qq_online">
+</a>
+	<div id="tel_detail" class="tel_detail" style="display:none">
+		<div style="height:30px;width:320px;"><img onclick="close_tel()" style="float:right" src="images/tel-close.png"/></div>
+		<div id="detail_tel1"  class="tel_detail_kuang" >
+			<div style="width:100%;height:10px;"></div>
+			<h5 style="margin-top:20px;color:#333;line-height:20px;text-align:left;font-size:14px;padding-left:15px"><img style="margin-bottom: 3px;margin-right:5px" src="images/onlineB.png">咨询电话</h5>
+			<h5 style="margin-top:10px;color:#333;line-height:20px;text-align:left;font-size:14px;padding-left:20px">0574-87287820转800</h5>
+			<h5 style="margin-top:10px;color:#333;line-height:20px;text-align:left;font-size:14px;padding-left:20px">010-84714322</h5>
+			<h5 style="color:#747474;line-height:20px;text-align:left;font-size:12px;margin-left:-5px;margin-bottom:14px"><img style="visibility: hidden;margin-right:5px" src="images/other-01.png">或留下您的信息，稍后我们会与您联系！</h5>
+			<input id="nick" style="width:285px;border:1px solid #bcbcbc;border-radius:2px;height:30px;line-height:30px;font-size:14px;padding:0 5px;" placeholder="称呼" />
+			<input id="company" style="width:285px;margin-top:14px;border:1px solid #bcbcbc;border-radius:2px;height:30px;line-height:30px;font-size:14px;padding:0 5px;" placeholder="公司" />
+			<input id="phone" style="width:285px;margin-top:14px;border:1px solid #bcbcbc;border-radius:2px;height:30px;line-height:30px;font-size:14px;padding:0 5px;" placeholder="手机" />
+			<button style="float:right;height:30px;margin-top:16px;margin-right:16px;border-radius:2px;font-size:14px;line-height:29px;color:#fff;cursor:pointer;" class="button button-raised button-primary" id="sub_product_advice">提 交</button>
+		</div>
+		<div id="detail_tel2" class="tel_detail_kuang" style="display:none">
+			<div style="width:100%;height:65px;"></div>
+			<h5 style="color:#333;line-height:30px;text-align:center">感谢您的提交，请保持手机畅通，</h5>
+			<h5 style="color:#333;line-height:30px;text-align:center">我们稍后会与您取得联系。</h5>
+		</div>
+	</div>
+
+   	<header id="site-header" class="site-header transparent" style="height:60px">
+			<div class="container">
+				<nav class="navbar" role="navigation">
+						<div class="navbar-header">
+							<button id="menu_button" class="btn btn-primary navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">菜单</button>
+							<a class="navbar-brand" href="javscript:;" data-gta="event" data-category="out-top-nav" data-action="tb logo">JusTalk Cloud 云通讯</a>
+						</div>
+						<div id="toggle_menu" class="toggle_menu collapse navbar-collapse">
+							<div class="items-wrap">
+								
+									<ul class="navbar-button list-inline">
+										<li>
+											<a class="btn btn-default btn-sm login nlogin" href="register.html" data-gta="event" data-category="out-top-nav" data-action="login">登录</a>
+										</li>
+									</ul> 
+									<ul class="navbar-button list-inline">
+										<li>
+											<a class="btn btn-default btn-sm login nlogin" href="login.html" data-gta="event" data-category="out-top-nav" data-action="login">注册</a>
+										</li>
+									</ul>					
+									<ul class="nav navbar-nav header-line">
+										<li>
+											<a href="map.html" data-gta="event" data-category="out-top-nav">地图</a>
+										</li>
+									</ul>
+									<ul class="nav navbar-nav header-line">
+										<li>
+											<a href="javscript:;" data-gta="event" data-category="out-top-nav">开发者</a>
+										</li>
+									</ul>
+									<ul class="nav navbar-nav header-line">
+										<li>
+											<a href="javscript:;" data-gta="event" data-category="out-top-nav">价格</a>
+										</li>
+									</ul>
+									<ul class="nav navbar-nav header-line">
+										<li>
+											<a href="javscript:;" data-gta="event" data-category="out-top-nav" >案例</a>
+										</li>
+									</ul>
+									<ul class="nav navbar-nav header-line">
+				            <li class="header_new_remind_li">
+				              <a href="javscript:;" data-gta="event" data-category="out-top-nav" id="unified-communication" class="private-cloud-text">统一通信</a>
+				            </li>
+				          </ul>
+									<ul class="nav navbar-nav header-line">
+										<li>
+											<a href="javscript:;" data-gta="event" data-category="out-top-nav" >教育云</a>
+										</li>
+									</ul>
+									<ul class="navbar-button list-inline">
+				            <li class="switch-locale-wrap">
+				              <div class="dropdown switch-locale header-locale" style="margin-left:-32px;" id="private_cloud">
+				                <div class="header-line">
+				                  <a href="javscript:;" class="dropdown-toggle zh header_private_cloud private-cloud-text" data-toggle="" >私有云</a>
+				                </div>
+				                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="private_cloud_ul">
+				                  <li class="mobile-show">
+				                  	<a href="javscript:;" >
+				                  		<div style="float: left;">
+				                  			<div class="header-show-img"></div>
+				                  		</div>
+				                      <div style="float:left;" class="m-l-10">私有云首页</div>
+				                      <div style="clear:both;"></div>
+				                  	</a>
+				                  </li>
+				                  <li>
+				                  	<a style="height:45px" href="javscript:;" >
+				                  		<div style="float: left;">
+				                  			<div class="video_service"></div>
+				                  		</div>
+				                  		<div style="float:left;">视频客服</div>
+				                  		<div style="clear:both;"></div>
+				                  	</a>
+				                  </li>
+				                  <li>
+				                  	<a href="javscript:;" >
+				                  		<div style="float: left;">
+				                  			<div class="newsletters"></div>
+				                  		</div>
+				                  		<div style="float:left;">企业会议</div>
+				                  		<div style="clear:both;"></div>
+				                  	</a>
+				                  </li>
+				                  <li>
+				                  	<a href="javscript:;" >
+				                  		<div style="float: left;">
+				                  			<div class="communication_tools"></div>
+				                  		</div>
+				                  		<div style="float:left;">通信工具</div>
+				                  		<div style="clear:both;"></div>
+				                  	</a>
+				                  </li>
+				                                    
+				                  <li>
+				                  	<a style="height:45px" href="javscript:;" >
+				                  		<div style="float: left;">
+				                  			<div class="intelligent_intercom"></div>
+				                  		</div>
+				                  		<div style="float:left;">智能对讲</div>
+				                  		<div style="clear:both;"></div>
+				                  	</a>
+				                  </li>
+				                </ul>
+				               </div>
+				              </li>
+				            </ul>
+							<ul class="navbar-button list-inline" style="margin-right:-10px">
+								<li class="switch-locale-wrap" >
+									<div class="dropdown switch-locale header-locale">
+		                <div class="header-line">
+											<a href="javascript:;" class="dropdown-toggle zh" data-toggle="" id="product_main">产品</a>
+										</div>
+										<ul class="dropdown-menu product_ul" role="menu" aria-labelledby="dLabel">
+											<div class="left_product" style="margin-top:10px" >
+												<div style="cursor:default" >
+													<div style="float:left;margin-left:17px;margin-top:4px;margin-bottom:3px;font-size:14px;" class="product_color" id="left_menu_head">产品</div>
+													<div style="clear:both;"></div>
+												</div>
+											</div>
+											<li class="left_menu_detail">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="audio"></div>
+													</div>
+													<div style="float:left;">语音通话</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="left_menu_detail">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="video"></div>
+													</div>
+													<div style="float:left;">视频通话</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="left_menu_detail">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="im"></div>
+													</div>
+													<div style="float:left;">IM 消息</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="left_menu_detail">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="live"></div>
+													</div>
+													<div style="float:left;">互动直播</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+		
+											<li class="left_menu_detail">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="conference"></div>
+													</div>
+													<div style="float:left;">会议</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<!-- 右边menu -->
+											<div class="right_product" style="margin-top:-239px;float:right;margin-right:10px">
+												<div style="cursor:default">
+													<div style="float:right;margin-right:50px;font-size:14px;margin-top:18px" class="product_color" id="right_menu_head">应用场景</div>
+													<div style="clear:both;"></div>
+												</div>
+											</div>
+											<li class="right_menu_detail" style="margin-top:-200px;">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="jy"></div>
+													</div>
+													<div style="float:left;">在线教育</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="right_menu_detail" style="margin-top:-160px;">
+												<a href="javscript:;">
+													<div style="float: left;">
+														<div class="yl"></div>
+													</div>
+													<div style="float:left;">智慧医疗</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="right_menu_detail" style="margin-top:-120px;">
+												<a href="javscript:;">
+													<div style="float: left;">
+														<div class="sjtx"></div>
+													</div>
+													<div style="float:left;">社交通讯</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+											<li class="right_menu_detail" style="margin-top:-80px;">
+												<a href="javscript:;" >
+													<div style="float: left;">
+														<div class="o2o"></div>
+													</div>
+													<div style="float:left;">O2O</div>
+													<div style="clear:both;"></div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--pc端-->
+		<div class="site-main" style="background:transparent">
+	<!-- pc端 -->
+	<div class="banner_pc" style="overflow:hidden">
+		<div id="banner_video">
+			<video  id="video1" autoplay="autoplay" loop="loop">
+				<source id="banner_source" src="images/banner.mp4"/>
+			</video>
+		</div>
+		<div id="particles-js" style="background:transparent;position:absolute;top:0">
+			<div id="intro_1" class="intro">
+				<div class="container"  style="width:88%;">
+					<div class="banner-pc-title">
+						<h1 class="title slogan banner-pc-title" style="color:#fff;">全球领先的移动音视频<br class="visible-md banner-pc-title">通讯云平台</h1>
+						<p class="title slogan none">
+						10年专注移动互联网即时通讯，致力打造新一代
+						<br class="visible-xxs">即时通讯应用</p>
+					</div>
+					<br>
+					<a id="cert_fang_nomal" href="javascript:;" target="_blank">
+						<div  class="banner-btn btn btn-primary btn-lg free-signup" data-gta="event" data-category="out-home" >在线教育解决方案</div>
+					</a>
+					<a id="cert_fang" class="banner-btn btn btn-primary btn-lg gushost watch-docs" href="javascript:;" data-gta="event" data-category="out-home" data-action="first-screen signup for free" style="height:55px;">
+						<div>免费体验</div>
+						<img id="cert_fang_img" src="images/bigfudai-01.png">
+					</a>
+										<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 手机端 -->
+	<div class="jumbotron banner_mobile">
+		<div id="hero-slide" class="carousel carousel-fade slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="item  active">
+					<a class="m-b-10 pull-left" href="javscript:;" target="_blank"><img src="images/red_bag.png" style="display:none;" id="red_bag" alt=""><span>UltimateShow 惊艳上线：直接下载体验全新升级的 JusTalk Cloud SDK 吧！ ></span></a>
+					
+				</div>
+				<!-- 第二张封面 方 -->
+				 <div class="item">
+				 	<a class="m-b-10" href="javascript:;" target="_blank">每一次改变，都是诚意与心意。—— JusTalk Cloud 新价格上线 ></a>
+				 </div>
+				 <div class="item">
+				 	<a class="m-b-10" href="javascript；；" target="_blank">教育云解决方案惊艳上线 —— 打造属于你的智慧教育 app ></a>
+				 </div>
+			</div>
+		</div>
+	<div class="container">
+		<div id="intro_1" class="intro" >
+			<h1 class="title slogan">
+				全球领先的移动音视频<br class="visible-xxs">通讯云平台</h1>
+			<p class="title slogan" style="font-size:24px;display:none">
+				10年专注移动互联网即时通讯，致力打造新一代
+				<br class="visible-xxs">即时通讯应用</p>
+		</div>
+		
+		<a id="cert_fang_nomal" class="btn btn-primary btn-lg free-signup" data-gta="event" data-category="out-home" href="javascript:;" target="_blank">在线教育解决方案</a>
+				<a id="cert_fang" class="btn btn-primary btn-lg gushost watch-docs" href="javascript:;" data-gta="event" data-category="out-home" data-action="first-screen signup for free"><div>免费体验</div>
+					<img id="cert_fang_img" src="images/bigfudai-01.png"></a>
+				<div class="clear"></div>
+	</div>
+		</div>
+		<!-- 手机端end -->
+		<!-- 中间的灰色条 -->
+		<div class="gray_bg">
+			<span class="possible">场景化视频通讯,让应用有无限可能</span>
+		</div>
+		<div class="triangle-down"></div>
+		
+		<!-- 轮播开始-->
+<div id="customer_say">
+	<div class="container text-center" >
+		<div id="c-slide" class="carousel slide auto">
+			<div class="carousel-inner">
+				<!-- 360 -->				
+				<div class="item active">				
+					<div class="row item-main" >
+						<div class="col-md-6 col-xs-12 item-main-detail">
+							<h4 class="item-main-it">
+								<span><img class="item-main-img" src="images/yinhao-01.png" /></span>
+								儿童机器人是360重磅推出的儿童产品，主打儿童陪伴功能，因此，我们对视频电话的实时、高清、流畅和稳定性的要求非常高。最终，我们选择 JusTalk Cloud 通讯云来为我们的产品提供一对一视频通话服务。无论是产品集成过程中良好的技术支持与沟通，还是最终产品的呈现，都是非常令人愉快的。
+								<span>
+									<img class="item-main-img1" src="images/yinhao-02.png" /></span>
+							</h4>
+							<p></p>
+							<div class="fr">
+								<h4 class="customer"><img src="images/pzhao-01.png" />360</h4>
+								<a href="javascript:;" class="show-detail-case">查看详细案例<img  src="images/video-application.png" alt="互动视频SDK应用"></a>
+							</div>
+						</div>
+						<div id="el_3_1" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/360-Video.png" alt="360儿童机器人借助一对一互动视频功能实现亲子陪伴">
+						</div>
+
+						<div id="el_3_2" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/360-Video.png" alt="360儿童机器人借助一对一互动视频功能实现亲子陪伴">
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!-- 全通教育 -->				
+				<div class="item">
+					<div class="row item-main" >
+						<div class="col-md-6 col-xs-12 item-main-detail">
+							<h4 class="item-main-it">
+								<span><img class="item-main-img" src="images/yinhao-01.png" /></span>
+								对于一个互联网教育企业来说，最看重的就是视频的质量以及视频交互方式的多样性，无疑 JusTalk Cloud 通讯云是符合我们的需求与预期的。全通专注于 K12 教育市场多年，我们需要延迟低、稳定性强的直播服务来实现我们的在线大型公开课。我们与 JusTalk Cloud 通讯云的合作非常高效，接入简单，服务也非常及时，保障了全辅导的快速上线。
+								<span><img class="item-main-img1" src="images/yinhao-02.png" /></span>
+							</h4>
+							<p></p>
+							<div class="fr">
+								<h4 class="customer"><img src="images/pzhao-01.png" />全通教育</h4>
+								<a href="javascript:;" class="show-detail-case">查看详细案例<img  src="images/video-application.png" alt="互动视频SDK应用"></a>
+							</div>
+						</div>
+						<div id="el_3_1" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/Qtone-class.png" alt="互动直播SDK实现全通教育app全辅导的名师课程">
+						</div>
+
+						<div id="el_3_2" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/Qtone-class.png" alt="互动直播SDK实现全通教育app全辅导的名师课程">
+						</div>
+						<div class="clear"></div>
+					</div>		
+				</div>
+
+				<!-- 英语趣配音 -->				
+				<div class="item">
+					<div class="row item-main" >
+						<div class="col-md-6 col-xs-12 item-main-detail">
+							<h4 class="item-main-it">
+								<span><img class="item-main-img" src="images/yinhao-01.png" /></span>
+								JusTalk Cloud 移动视频通讯云的 SDK 接入比其他主流通讯云要简单得多，开发量少。我们之前尝试过其他的云通讯，但接通率和 SDK 稳定性都明显不如 JusTalk Cloud 移动视频通讯云，所以最后我们果断放弃了之前的选择。 
+
+								另外，JusTalk Cloud 移动视频通讯云的服务也非常好，很贴心，对用户需求的反应非常迅速。我们提的很多需求都及时得到了满足，定制开发也不会拖慢进度。
+								<span><img class="item-main-img1" src="images/yinhao-02.png" /></span>
+							</h4>
+							<p></p>
+							<div class="fr">
+								<h4 class="customer"><img src="images/pzhao-01.png" />英语趣配音</h4>
+								<a href="javascript:;" class="show-detail-case">查看详细案例<img  src="images/video-application.png" alt="互动视频SDK应用"></a>
+							</div>
+						</div>
+						<div id="el_3_1" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/video-tutoring.png" alt="一对一视频辅导可实时指导英语发音">
+						</div>
+
+						<div id="el_3_2" class="col-md-6 col-xs-12 border-none">
+							<img id="el_3" src="images/video-tutoring.png" alt="一对一视频辅导可实时指导英语发音">
+						</div>
+						<div class="clear"></div>
+					</div>		
+				</div>	
+			</div>
+			<div  id="lunbo_pointer">
+				<img  data-target="#c-slide" id="360" data-slide-to="0" src="images/360logo.png" class="customer_logo pointer" alt="">
+				<img  data-target="#c-slide" id="qt" data-slide-to="1" src="images/Qtone-Educaition_0.png" class="customer_logo pointer" alt="">
+				<img  data-target="#c-slide" id="en" data-slide-to="2" src="images/Fun-dubbing_0.png" class="customer_logo pointer" alt="">
+			</div>
+
+			<div class="carousel-inner" >
+				<a class="item active" href="#c-slide"></a>
+				<a class="item" href="#c-slide"></a>
+				<a class="item" href="#c-slide"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 稳定可靠的云通讯服务 -->
+<div class="features">
+	<div class="container text-center">
+		<h2 class="index_title m-b-100">稳定可靠的云通讯服务</h2>
+		<div class="row">
+			<div class="cloud_survice  col-xs-6 col-sm-4 " >
+				<div class="feature project m-b-30">
+					<!-- <div class="feature-icon"></div> -->
+					<img src="images/global-distributed.png" alt="用户在全球都可获得清晰、流畅的音视频通讯服务" class="goodness">
+					<h4>全球分布式接入</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">全球120多个国家部署服务器，ARC实现SDN在全球范围的支持就近接入。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature task">
+					<img src="images/SVC.png" alt="H.264 SVC编码视频会议系统" class="goodness">
+					<h4>高性能SVC编码</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-11 col-sm-offset-1">
+							<h5 class="l-h-20">支持SVC，一次编码适应多种网络和终端需求，延时比传统 MCU 低 100~200ms。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature wall">
+					<!-- <div class="feature-icon"></div> -->
+					<img src="images/high-stability.png" alt="平台运行稳定并有全球通话质量实时监测运维" class="goodness">
+					<h4>高稳定运维平台</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">云平台稳定运行1000万小时，多维度运营平台实时监测，全球音视频通话质量数据与优化管理。</h5>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature file">
+					<img src="images/super-smooth.png" alt="高丢包环境下仍可保证流畅的音视频通话" class="goodness">
+					<h4>超流畅音视频体验</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">独家语音增强技术与SPo视频甜点技术，在丢包达到 30%时，仍然能够提供清晰流畅的音视频通话效果。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature event">
+					<img src="images/dynamic-transmission.png" alt="动态传输模块适于移动互联网环境" class="goodness">
+					<h4>超智能动态传输模块</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">独家ARC传输模块，比TCP更加高效可靠，动态分布式传输、防火墙穿透、智能Push等能力完美适用移动互联网环境。</h5>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature wall">
+					<img src="images/high-quality.png" alt="智能连接与QoS保证高质量" class="goodness">
+					<h4>高质量数据机制</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 style="line-height:20px;">智能连接和数据 QoS保证高质量，亿级用户规模的软件方案。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice bottom_goodness  col-xs-6 col-sm-4">
+				<div class="feature wall">
+					<img src="images/Multi-media-Engine.png" alt="特有音视频引擎可适应码率节省带宽" class="goodness">
+					<h4>独特的音视频引擎</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">行业领先的视频超分辨率技术能大大提升分辨率视频图像的画面质量；视频宽带节省模式，对不同运动级别的图像采用不同码率，最高节省90%带宽。 </h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice bottom_goodness  col-xs-6 col-sm-4">
+				<div class="feature wall">
+					<img src="images/super-safe.png" alt="通话数据只传输不储存" class="goodness">
+					<h4>超安全传输机制</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">通话数据只传输不储存，100%传输安全。对于有特殊加密需求的行业与企业，企业可使用加密API确保数据安全。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cloud_survice  col-xs-6 col-sm-4">
+				<div class="feature wall">
+					<img src="images/quick-response.png" alt="集成问题能得到快速解决" class="goodness">
+					<h4>快速响应机制</h4>
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h5 class="l-h-20">顶尖技术团队工作日随时响应，在论坛提出相应问题即可获得快速解答，确保问题能第一时间解决。</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bear-weight">
+	<div class="container text-center">
+		<h2 class="index_title m-b-50">
+			承载十亿级用户规模，
+			<br class="visible-xs">在关键新兴行业引领通讯潮流</h2>
+		<div class="row cases-list">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="box-item">
+						<div class="case box-content ad bear-online" data-gta="event" data-category="out-home">
+							<div>&nbsp;</div>
+							<div class="bear-online-text">在线教育</div>
+							<div class="bear-online-text1">更专业的在线教育解决方案</div>
+							<a href="javscript:;">
+							<div class="bear-online-a">进一步了解教育云<img class="fr" src="images/detail_edu.png" alt=""></div>
+							</a>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row cases-list m-t-90">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="box-item">
+						<div class="case box-content ad bear-medical"  data-gta="event" data-category="out-home">
+							<div>&nbsp;</div>
+							<div class="bear-text">智慧医疗</div>
+						</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="box-item">
+						<div class="case box-content ad bear-social" data-gta="event" data-category="out-home">
+							<div>&nbsp;</div>
+							<div class="bear-text">社交通讯</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+<!-- 部分合作伙伴 -->
+<div class="container-fluild partner">
+		<div class="container text-center">
+			<h2 class="index_title">部分合作伙伴</h2>
+			<div class="row" style="height:30px;"></div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="中国移动融合通讯" src="images/china_mobile.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="中国联通融合通讯" src="images/china_unicom.png" /></div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12"style="padding-top:5px;padding-bottom:10px;">
+					<img alt="微软融合通讯" src="images/microsoft.png" /></div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="奇虎360" src="images/360.png" /></div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="酷派手机" src="images/coolpad.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="中兴手机" src="images/zte.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="合作伙伴_全通教育" src="images/quantong.png" /></div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="陌陌科技" src="images/MOMO.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="平安好医生" src="images/Ping-An-doctors.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="春雨医生" src="images/Chun-Yu-doctors.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="心医健康" src="images/cinyi.png" /></div>
+				<div class="col-md-3 col-sm-6 col-xs-12 partner-detail">
+					<img alt="英语趣配音" src="images/yyqpy.png" /></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 技术支持 SDK 新闻报道 -->
+	<div class="container-fluild sdk-news">
+		<div class="container text-center" style="width:100%;">
+			<div class="row" style="height:50px;"></div>
+			<div class="row">
+				<div class="col-md-2 col-md-offset-3 col-xs-12 sdk-news-detail">
+					<div class="feature project">
+					<div class="feature-icon"><img src="images/technical-01.png"></div>
+					<h4>技术支持</h4>
+					<div class="row">
+						<div class="col-xs-10 col-md-offset-0 col-sm-12 col-md-12 col-sm-offset-1 col-xs-offset-1 ">
+							<h5 class="l-h-20">您在集成 SDK 中遇到的任何问<br/>题，都可以在这里找到答案</h5>
+						</div>
+					</div>
+					<a href="javascript:;">SDK集成支持 ></a>
+				</div>
+				</div>
+				<div class="col-md-2 col-sm-6 col-xs-12 sdk-news-detail" >
+					<div class="feature task">
+					<div class="feature-icon"><img src="images/sdk-01.png"></div>
+					<h4>SDK 更新</h4>
+					<div class="row">
+						<div class="col-xs-10 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-1 ">
+							<h5 class="l-h-20">SDK 正式版本号：6.8.2<br/>更新日期：2016.08.03</h5>
+						</div>
+					</div>
+					<a href="javascript:;">SDK版本说明 ></a>
+				</div>
+				</div>
+				<div class="col-md-2 col-sm-6 col-xs-12 sdk-news-detail" >
+					<div class="feature task">
+					<div class="feature-icon"><img src="images/news-01.png"></div>
+					<h4>新闻报道</h4>
+					<div class="row">
+						<div class="col-xs-10 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-1 ">
+							<h5 class="l-h-20">JusTalk Cloud 助力视频问诊<br/>APP，移动医疗成市场新宠儿</h5>
+						</div>
+					</div>
+					<a href="javascript:;">云通讯新闻 ></a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer hack-webkit-render">
+	<div class="container max1010">
+		<div class="row footer-nav">
+			<div class="col-md-12 clearfix">
+			<ul class="nav-group" style="width:18%">
+					<h4>产品</h4>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >语音通话</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >视频通话</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >IM消息</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >互动直播</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >音视频会议</a>
+					</li>
+					<li class="friendly_link">
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >友情链接：淘之家</a>
+					</li>
+
+				</ul>
+			<ul class="nav-group" style="width:18%">
+					<h4>场景与方案</h4>
+					<li>
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >在线教育</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >智慧医疗</a>
+					</li>
+					<li>
+						<a href="javascript:;" target="_blank"  data-gta="event" data-category="out-footer" >社交通讯</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >O2O</a>
+					</li>
+				</ul>
+				<ul class="nav-group" style="width:18%;height:176px;">
+					<h4>开发者服务</h4>
+					<li>
+						<a  href="javascript:;" target="_blank" data-gta="event" data-category="out-footer" >开发文档</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >常见问题</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >社区</a>
+					</li>
+				</ul>
+
+				<ul class="nav-group" style="width:18%;height:176px;">
+					<h4>关于我们</h4>
+					<li>
+						<a href="javascript:;" data-gta="event" data-category="out-footer" >关于云通讯</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >联系我们</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >新闻报道</a>
+					</li>
+					<li>
+						<a  href="javascript:;" data-gta="event" data-category="out-footer" >合作网站</a>
+					</li>
+				</ul>
+				<ul class="nav-group" style="height:280px;width:28%" >
+					<h4>联系我们</h4>
+					<li>
+						<span>咨询电话：0574-87287820-800</span>
+					</li>
+					<li>
+						<span>产品咨询：sales@justalkcloud.com</span>
+					</li>
+					<li>
+						<span>技术支持：<a href="javascript:;">
+            <span style="text-align:left;color:#AABDBD;line-height:24px">  进入支持> </span>
+          </a></span>
+					</li>
+					<li>
+						<span class="small">周一至周五 9:30 ~ 18:00</span>
+					</li>
+				</ul>
+				
+				</div>
+		
+
+			<center>
+				<ul class="nav-group" style="width:92%" >
+					<li class="footer_lang">
+						<center>
+						<img src="images/language.png">
+						 							<a class="footer_en_lang" onclick="login_change_lang('zh')" style="color:#fff;">中文(简体)</a> | <a class="footer_en_lang" onclick="login_change_lang('en')">English</a>
+												</center>
+					</li>
+					<li><span><center>
+			<div class="sns-info">
+			  <a onmouseover="xs_vcode('./cn/')" onmouseout="yc_vcode('./cn/')">
+				<div  class="icon" style="width:40px;height:40px;" >
+					<div id="wx_vcode" style="position:absolute;width:167px;height:182px;margin-left:-64px;margin-top:-181px;z-index:50;display:none"><img src="images/public-06.png"/></div>
+					<img id="wx_img" src="images/weixing-01.png"/>
+				</div>
+			  </a>
+				<!----微博-->
+			  <a href="javascript:;" target="_blank">
+				<div  class="icon"style="margin-left:15px;width:40px;">
+					<img onmouseover="this.src='images/weibo-01.png'" onmouseout="this.src='images/weibo-01.png'" src="images/weibo-01.png"/>
+				</div>
+			 </a>
+
+				<!--分享-->
+				<div class="icon" style="margin-left:15px;width:40px;cursor:pointer;">
+					<img id="share_ways_img" src="images/fenxiang-01.png"/>
+					<div style="height:3px;"></div>
+					<div id="share_ways" style="width:190px;height:59px;margin-left:-10px;margin-top:-90px;z-index:150;background:url('images/share_bg_1.png');display:none">
+						<a href="javascript:;" target="_blank">
+						<div style="float:left;width:30px;height:30px;margin-left:14px;margin-top:12px;">
+							<img onmouseover="this.src='images/sharet_on.png'" onmouseout="this.src='images/sharet_off.png'" src="images/sharet_off.png"/>
+						</div>
+						</a>
+						<a rel="nofollow" href="javascript:;" target="_blank">
+						<div style="float:left;width:30px;height:30px;margin-left:14px;margin-top:12px;">
+							<img onmouseover="this.src='images/sharef_on.png'" onmouseout="this.src='images/sharef_off.png'" src="images/sharef_off.png"/>
+						</div>
+						</a>
+						<a href="javascript:;" target="_blank">
+						<div style="float:left;width:30px;height:30px;margin-left:14px;margin-top:12px;">
+							<img onmouseover="this.src='images/shareq_on.png'" onmouseout="this.src='images/shareq_off.png'" src="images/shareq_off.png"/>
+						</div>
+						</a>
+						<a href="javascript:;" target="_blank">
+						<div style="float:left;width:30px;height:30px;margin-left:14px;margin-top:12px;">
+							<img onmouseover="this.src='images/sharew_on.png'" onmouseout="this.src='images/sharew_off.png'" src="images/sharew_off.png"/>
+						</div>
+						</a>
+                        <div style="clear: both;"></div>
+					</div>
+                </div>
+                
+            </div>
+				</center></span></li>
+				<li><span><center><img src="images/fangkuai-01.png">&nbsp;<a href="javascript:;""><span style="color:#606060;line-height:24px">
+					&nbsp;&nbsp;Juphoon&nbsp;&nbsp;
+					</span></a>&nbsp;&nbsp;<img src="images/fangkuai-01.png"><a href="javascript:;">
+						<span style="color:#606060;line-height:24px">&nbsp;&nbsp;JusTalk&nbsp;&nbsp;</span></a>&nbsp;&nbsp;
+						<img src="images/fangkuai-01.png">&nbsp;&nbsp;&nbsp;Copyright  © 2018 宁波菊风系统软件有限公司 | 浙ICP备15019097号</center></span></li>
+				</ul>
+                </center>
+			
+			</div>
+		</div>
+	</div>
+ 	
+   
+</footer>
+  </body>
+  <!--<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>-->
+  <!--<script src="lib/jquery.js"></script>-->
+  <!--<script src="js/index.js"></script>-->
+</html>
